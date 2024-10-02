@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         "app-green": "#10b981",
       },
+
       backgroundColor: {
         "app-bg": "#141414",
       },
