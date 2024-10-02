@@ -8,7 +8,7 @@ interface LinkProps extends ComponentProps<"a"> {
 
 export function Alink({ variant = false, children, ...rest }: LinkProps) {
   const variantStyles = variant
-    ? "bg-transparent hover:bg-zinc-500 "
+    ? "bg-transparent hover:dark:bg-zinc-500 hover:bg-zinc-300 "
     : "bg-app-green hover:opacity-80 active:bg-green-400";
 
   return (
