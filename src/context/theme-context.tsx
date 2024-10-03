@@ -16,11 +16,7 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<"light" | "dark">(() => {
-    const storagedTheme = localStorage.getItem("@restorant-theme");
-    console.log(typeof storagedTheme);
-    return storagedTheme === "dark" ? "dark" : "light";
-  });
+  const [theme, setTheme] = useState<"light" | "dark">("light");
 
   const toggleTheme = () => {
     setTheme((prev) => {
@@ -29,6 +25,15 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       return newTheme;
     });
   };
+
+  useEffect(() => {
+    const storagedTheme = localStorage.getItem("@restorant-theme");
+    if (storagedTheme === "dark") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }, []);
 
   useEffect(() => {
     if (theme === "dark") {
