@@ -1,12 +1,13 @@
 import heroImage from "@/assets/fridge.png";
 import Image from "next/image";
 import { Alink } from "./a-link";
+import { Section } from "./section";
 
 export function Hero() {
   return (
-    <section className="w-full">
+    <Section>
       <div className="container mx-auto flex flex-col place-items-end items-center p-5 lg:grid lg:grid-cols-2">
-        <div className="flex flex-col gap-10">
+        <div className="animate-animateShow2 flex flex-col gap-10">
           <h1 className="text-4xl font-extrabold tracking-wide lg:text-5xl xl:text-7xl">
             <span className="text-app-green"></span>
             Aproveite ao <span className="text-app-green">máximo </span>seus
@@ -24,7 +25,7 @@ export function Hero() {
             Comece Agora!
           </Alink>
         </div>
-        <div className="hidden h-[440px] w-[440px] rounded-full border border-emerald-700 lg:block 2xl:h-[600px] 2xl:w-[600px] dark:border-app-green">
+        <div className="animate-animateShow3 hidden h-[440px] w-[440px] rounded-full lg:block 2xl:h-[600px] 2xl:w-[600px]">
           <Image
             src={heroImage}
             className="h-full w-full object-cover"
@@ -32,6 +33,6 @@ export function Hero() {
           />
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

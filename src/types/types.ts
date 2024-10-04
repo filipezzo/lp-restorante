@@ -5,3 +5,13 @@ export type Cards = {
   heading: string;
   paragraph: string;
 };
+
+export type Ingredients = {
+  id: number;
+  symbol: string;
+};
+
+export type Recipes = {
+  id: number;
+  symbol: ReactElement;
+};

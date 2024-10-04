@@ -4,7 +4,7 @@ import { ThemeSwitcher } from "./theme-switcher";
 
 export function Header() {
   return (
-    <header className="w-full">
+    <header className="animate-animateShow1 w-full">
       <div className="container mx-auto flex flex-col items-center justify-between gap-5 p-5 md:flex-row md:gap-0">
         <a className="flex items-center gap-2" href="#">
           <ChefHat className="hidden size-9 md:block" />
